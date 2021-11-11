@@ -1,0 +1,11 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "effect give @s minecraft:water_breathing 3600 1 true",
+        "permisson_level": 4
+    },
+    "interval": 20,
+    "name": "Water mmm",
+    "description": "You can breathe and see perfectly underwater." 
+}

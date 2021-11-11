@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"origins:throw_ender_pearl",
+		"enderian:reflexes_passive",
+		"enderian:reflexes_active",
+		"enderian:join_team",
+		"enderian:join_team_passive",
+		"origins:extra_reach",
+		"origins:pumpkin_hate",
+		"origins:ender_particles",
+		"origins:water_vulnerability"
+	],
+	"icon": "minecraft:ender_pearl",
+	"order": 1,
+	"impact": 2,
+	"loading_priority": 5,
+	"name": "Enderian",
+	"description": "Born as sons and daughters of the Ender Dragon, Enderians are capable of teleporting but are vulnerable to water.",
+	"unchoosable": true
+}

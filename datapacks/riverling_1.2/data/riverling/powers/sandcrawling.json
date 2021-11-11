@@ -1,0 +1,47 @@
+{
+    "type": "origins:multiple",
+    "sand": {
+   	 "type": "origins:phasing",
+   	 "blacklist": false,
+   	 "render_type": "blindness",
+   	 "view_distance": 10,
+    	"block_condition": {
+        	"type": "origins:block",
+       		"block": "minecraft:sand"
+   	 },
+   	 "phase_down_condition": {
+       		 "type": "origins:and",
+      		  "conditions": [
+           		 {
+               			 "type": "origins:sneaking"
+           		 },
+            		 {
+                		"type": "origins:on_block"
+           		 }
+       		 ]
+    	}
+    },
+    "gravel": {
+   	 "type": "origins:phasing",
+   	 "blacklist": false,
+   	 "render_type": "blindness",
+   	 "view_distance": 10,
+    	"block_condition": {
+        	"type": "origins:block",
+       		"block": "minecraft:gravel"
+   	 },
+   	 "phase_down_condition": {
+       		 "type": "origins:and",
+      		  "conditions": [
+           		 {
+               			 "type": "origins:sneaking"
+           		 },
+            		 {
+                		"type": "origins:on_block"
+           		 }
+       		 ]
+    	}
+    },
+    "name": "Small crawl",
+    "description": "You can crawl through sand and gravel by crawling." 
+}

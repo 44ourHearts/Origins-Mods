@@ -1,0 +1,34 @@
+{
+    "type":"origins:active_self",
+    "cooldown": 0,
+    "hud_render": {
+      "should_render": false
+    },
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "entity_action": {
+      "type":"origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command":"tp @s @e[limit=1,tag=tp]",
+		  "permission_level": 4
+        },
+		  {
+            "type": "origins:execute_command",
+            "command":"tag @e[tag=tp] remove tp",
+			"permission_level": 4
+          }
+	]
+	},
+	"name": "Small Body p3",
+	"description": "this tps you to the person who is tagged.",
+	"hidden": true,
+	    "condition":{
+		"type": "origins:resource",
+		"resource": "riverling:toggle",
+		"comparison": "==",
+		"compare_to": 1
+   	}
+}

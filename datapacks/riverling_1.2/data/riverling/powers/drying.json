@@ -1,0 +1,250 @@
+{
+	"type": "origins:multiple",
+	"dry": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "riverling:drylevel",
+			"change": -1
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water",
+			"inverted": true
+		}
+	},
+	"name": "Drying",
+	"description": "If youre above water your wetness level will lower slowly, once its at 0 you will start taking damage. To refill this just go into the water again to regenerate it. If you however wish to regain wetness, you can eat seagrass or kelp. Watch out tho because when you eat it you become more and more swollen, and at level 7 you cant eat it anymore. To regain this ability just go into thwe water and it will regenarate.",
+	"wetting": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "riverling:drylevel",
+			"change": 1
+		},
+		"interval": 10,
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		}
+	},
+	"foodregain": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "riverling:eatcount",
+			"change": -1
+		},
+		"interval": 60,
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		}
+	},
+	"eatkelp": {
+		"type": "origins:active_self",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:kelp"
+						}
+					}
+				},
+				{
+					"type": "origins:resource",
+					"resource": "riverling:eatcount",
+					"comparison": "<",
+					"compare_to": 7
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "clear @s kelp 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "riverling:drylevel",
+					"change": 43
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "riverling:eatcount",
+					"change": 1
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 4
+				}
+			]
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		}
+	},
+	"eatweedseagrass": {
+		"type": "origins:active_self",
+		"cooldown": 20,
+		"hud_render": {
+			"should_render": false
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:seagrass"
+						}
+					}
+				},
+				{
+					"type": "origins:resource",
+					"resource": "riverling:eatcount",
+					"comparison": "<",
+					"compare_to": 7
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "clear @s seagrass 1"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "riverling:drylevel",
+					"change": 43
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "riverling:eatcount",
+					"change": 1
+				},
+				{
+					"type": "origins:feed",
+					"food": 2,
+					"saturation": 2
+				}
+			]
+		},
+		"key": {
+			"key": "key.use",
+			"continuous": true
+		}
+	},
+	"dryingout": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:damage",
+			"amount": 2,
+			"source": {
+				"name": "dryout",
+				"bypass_armor": true,
+				"unblockable": true
+			}
+		},
+		"interval": 40,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "riverling:drylevel",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	"dryout0": {
+		"type": "origins:model_color",
+		"red": 1,
+		"green": 1,
+		"blue": 1,
+		"condition": {
+   			 "type": "origins:resource",
+  			  "resource": "riverling:drylevel",
+   			  "comparison": "==",
+  			  "compare_to": 300
+		}
+	},
+	"dryout1": {
+		"type": "origins:model_color",
+		"red": 0.75,
+		"green": 0.75,
+		"blue": 0.75,
+		"condition": {
+   			 "type": "origins:resource",
+  			  "resource": "riverling:drylevel",
+   			  "comparison": "==",
+  			  "compare_to": 225
+		}
+	},
+	"dryout2": {
+		"type": "origins:model_color",
+		"red": 0.5,
+		"green": 0.5,
+		"blue": 0.5,
+		"condition": {
+   			 "type": "origins:resource",
+  			  "resource": "riverling:drylevel",
+   			  "comparison": "==",
+  			  "compare_to": 150
+		}
+	},
+	"dryout3": {
+		"type": "origins:model_color",
+		"red": 0.25,
+		"green": 0.25,
+		"blue": 0.25,
+		"condition": {
+   			 "type": "origins:resource",
+  			  "resource": "riverling:drylevel",
+   			  "comparison": "==",
+  			  "compare_to": 75
+		}
+	},
+	"dryout5": {
+		"type": "origins:model_color",
+		"red": 0.5,
+		"green": 0.5,
+		"blue": 0.5,
+		"condition": {
+   			 "type": "origins:resource",
+  			  "resource": "riverling:drylevel",
+   			  "comparison": "==",
+  			  "compare_to": 0
+		}
+	},
+	"shaderdry": {
+		"type": "origins:shader",
+		"shader": "minecraft:shaders/post/desaturate.json",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "riverling:drylevel",
+			"comparison": "<=",
+			"compare_to": 75
+		}
+	}
+}

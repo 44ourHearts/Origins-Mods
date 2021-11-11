@@ -1,0 +1,50 @@
+**--------------**
+**Riverling v1.1**
+**-----:red_circle::red_circle::red_circle:-----**
+*You are a creature of the rivers and oceans*
+**-----------**
+:white_circle: **drying**
+*If youre above water your wetness level will lower slowly, 
+ once its at 0 you will start taking damage.
+To refill this just go into the water again to regenerate it.
+If you however wish to regain wetness, you can eat seagrass or kelp.
+Watch out tho because when you eat it you become more and more 
+ swollen, and at level 7 you cant eat it anymore.
+To regain this ability just go into the water and it will regenerate.*
+**-----------**
+:green_circle: **Mmmmm water**
+*You can breathe and see perfectly underwater.*
+:green_circle: **Water boost**
+*You can boost yourself while submerged in water.*
+:green_circle: **Rainy swim**
+*While exposed to rain, you are able to swim anywhere.*
+:yellow_circle: **Small body**
+*You are much smaller than usual, this is to avoid
+ being caught by fishing rods and fishing nets.
+This also makes you be able to get put inside a bucket by
+ being punched by someone holding a waterbucket.
+Use your secondary while in a bucket to hop out.
+[power by Experiment_5321]*
+:red_circle:**fragile**
+*You have 7 hearts.*
+:red_circle:**carnicore**
+*You can only consume meat.*
+**---new---**
+:green_circle: **Climbing***
+*You can climb up walls is if they were ladders.*
+**------------**
+**IMPORTANT**
+***for the bucket power to actually work, follow these steps!***
+**1** *Open the datapack folder*
+*(You should see the bucket folder)*
+**2** *Now, move the bucket folder out of the riverling folder**
+*(The bucket folder should now be in the datapacks folder on its own.)*
+**3** *You should now be able to go to the bucket dimension if your punched with a water bucket.*
+**again, credits to Experiment_5321 for the power**
+**------------**
+:green_circle: *balanced!*
+:yellow_circle: *needs buff!*
+:orange_circle: *needs nerf!*
+:white_circle: *boring!*
+**react with one of the above if you agree with any of the things above**
+*buffed, upgraded health and added climbing ability*

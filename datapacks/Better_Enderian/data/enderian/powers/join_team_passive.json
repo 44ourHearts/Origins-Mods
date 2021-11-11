@@ -1,0 +1,10 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "execute if score passive powers matches 1 run team join enderman @s",
+		"permission_level": 4
+	},
+	"interval": 10,
+	"hidden": true
+}

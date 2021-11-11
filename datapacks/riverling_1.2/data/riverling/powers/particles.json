@@ -1,0 +1,5 @@
+{
+    "type": "origins:particle",
+    "particle": "minecraft:dolphin_move_particle",
+    "frequency": 5
+}

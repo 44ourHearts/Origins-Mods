@@ -1,0 +1,26 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:width 0.45",
+          "permission_level": 4
+        },
+        {    
+          "type": "origins:execute_command",
+          "command": "scale set pehkui:height 0.45",
+          "permission_level": 4
+        }
+     ]
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "riverling:eatcount",
+        "comparison": "==",
+       "compare_to": 6
+    },
+    "hidden": true
+}

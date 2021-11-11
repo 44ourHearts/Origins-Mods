@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "origins": [
+    "origins:enderian_no_reflexes",
+    "origins:enderian_no_tp",
+    "origins:enderian_default"
+  ]
+}

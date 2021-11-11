@@ -1,0 +1,20 @@
+{
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:and",
+		"actions":[
+			{
+				"type": "origins:execute_command",
+				"command": "function enderian:update_origin",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players set @s cooldown 0",
+				"permission_level": 4
+			}
+		]
+	},
+	"execute_chosen_when_orb": true,
+	"hidden": true
+}

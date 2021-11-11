@@ -1,0 +1,30 @@
+{
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:execute_command",
+      "command": "execute in custom_dimensions:bucket run teleport @s 0 2 0",
+      "permission_level": 4
+    },
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:water_bucket"
+                }
+            }
+        }
+    },
+    "cooldown": 0,
+    "name": "Small Body",
+    "description": "You are small enought to be picked up in a bucket. (Can be toggled off by pressing your primary key above water, if its toggled or not will show up as a bar. NOTE: IF youve been teleported to the bucket and toggle this off you have to turn it on again to return. [Original power by Experiment_5321]",
+    "condition":{
+	"type": "origins:resource",
+	"resource": "riverling:toggle",
+	"comparison": "==",
+	"compare_to": 1
+   }
+}

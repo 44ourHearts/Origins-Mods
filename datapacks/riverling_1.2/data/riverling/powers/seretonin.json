@@ -1,0 +1,22 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+  	"type": "origins:spawn_effect_cloud",
+  	"radius": 5.0,
+ 	 "wait_time": 40,
+ 	 "effect": {
+    		"effect": "minecraft:regeneration",
+    		"amplifier": 3,
+  		  "duration": 70
+  	}
+    },
+    "cooldown": 400,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+	"key": "key.origins.secondary_active"
+    },
+    "name": "Seratonin",
+    "description": "You are able to unleash a cloud of seratonin wich heals every entity in a 10 block area." 
+}

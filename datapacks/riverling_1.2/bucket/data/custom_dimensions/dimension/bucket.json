@@ -1,0 +1,40 @@
+{
+  "type": {
+    "name": "minecraft:bucket",
+    "ultrawarm": false,
+    "natural": true,
+    "piglin_safe": false,
+    "respawn_anchor_works": false,
+    "bed_works": false,
+    "has_raids": false,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 1,
+    "ambient_light": 0,
+    "fixed_time": 1000,
+    "logical_height": 32,
+    "infiniburn": "minecraft:infiniburn_overworld",
+    "min_y": 0,
+    "height": 32
+  },
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:water",
+          "height": 3
+        }
+      ],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}
